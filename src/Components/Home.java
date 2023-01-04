@@ -1,12 +1,19 @@
+package Components;
 
-package swings;
+import net.miginfocom.swing.MigLayout;
+
+
+
 
 
 public class Home extends javax.swing.JLayeredPane {
 
+    MigLayout latyout;
     
     public Home() {
         initComponents();
+        latyout = new MigLayout("fillx, filly", "0[]0[]0[]", "0[]0");
+        
     }
 
 
