@@ -20,7 +20,7 @@ import javax.swing.JComponent;
  *
  * @author user
  */
-public class ImageAvatar extends JComponent { 
+public class ImageAvatar extends JComponent {  
       public Icon getImage() {
         return image;
     }
