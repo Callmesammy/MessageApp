@@ -1,23 +1,27 @@
+
 package Components;
 
 import net.miginfocom.swing.MigLayout;
 
 
-
-
-
 public class Home extends javax.swing.JLayeredPane {
 
-    MigLayout latyout;
-    
+ private MigLayout layout;
     public Home() {
         initComponents();
-        latyout = new MigLayout("fillx, filly", "0[]0[]0[]", "0[]0");
-        
+        init();
+    }
+    
+    private void init(){
+        layout = new MigLayout("inset 0");
+         setLayout(new MigLayout("fillx, filly", "0[180!]5[fill, 80%]5[180!]5", "0[fill]0"));
+         this.add(new left());
+         this.add(new Chat());
+         this.add(new right());
     }
 
-
-    @SuppressWarnings("unchecked")
+    
+        @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
