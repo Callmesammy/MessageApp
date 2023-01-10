@@ -1,19 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package components;
 
-/**
- *
- * @author HP
- */
-public class menu_chats extends javax.swing.JPanel {
+
+public class menu_chat extends javax.swing.JPanel {
 
     /**
      * Creates new form menu_left
      */
-    public menu_chats() {
+    public menu_chat() {
         initComponents();
     }
 
@@ -35,16 +29,16 @@ public class menu_chats extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(44, 44, 44)
                 .addComponent(jLabel1)
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(213, 213, 213)
+                .addGap(194, 194, 194)
                 .addComponent(jLabel1)
-                .addContainerGap(290, Short.MAX_VALUE))
+                .addContainerGap(390, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
