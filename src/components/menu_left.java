@@ -28,8 +28,8 @@ public class menu_left extends javax.swing.JPanel {
         }
         private void call(){
             menulist.removeAll();
-          for(int i =0; i <10; i++){
-          menulist.add(new menu_item("Enter name" +i),"wrap");
+          for(int i =0; i <20; i++){
+          menulist.add(new menu_item("Last calls " +i),"wrap");
          
         }
            status();
