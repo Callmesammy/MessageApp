@@ -1,6 +1,7 @@
 package components;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -16,6 +17,8 @@ public class menu_item extends javax.swing.JPanel {
     public menu_item(String text) {
         initComponents();
         enterText.setText(text);
+        setCursor(new Cursor(Cursor.HAND_CURSOR) {
+        });
         init();
     }
     
@@ -23,7 +26,7 @@ public class menu_item extends javax.swing.JPanel {
         addMouseListener(new MouseAdapter(){
             @Override
             public void mouseEntered(MouseEvent e) {
-                setBackground(new Color(247,247,247));
+                setBackground(new Color(245,225,220));
             }
 
             @Override

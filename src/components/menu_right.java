@@ -22,6 +22,8 @@ public class menu_right extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(236, 255, 254));
+
         jLabel1.setText("right");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

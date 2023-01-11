@@ -23,7 +23,7 @@ public class menu_left extends javax.swing.JPanel {
     }
     
     private void init(){
-        menulist.setLayout(new MigLayout("fillx", "0[]0", "3[]3"));
+        menulist.setLayout(new MigLayout("fillx", "0[]0", "1[]1"));
                   call();
         }
         private void call(){
@@ -68,7 +68,8 @@ public class menu_left extends javax.swing.JPanel {
         scr = new javax.swing.JScrollPane();
         menulist = new javax.swing.JLayeredPane();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(236, 255, 254));
+        setOpaque(false);
 
         heading.setBackground(new java.awt.Color(218, 215, 215));
         heading.setOpaque(true);
@@ -106,7 +107,10 @@ public class menu_left extends javax.swing.JPanel {
 
         scr.setBorder(null);
         scr.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        scr.setOpaque(false);
 
+        menulist.setBackground(new java.awt.Color(236, 255, 254));
+        menulist.setOpaque(true);
         menulist.setLayout(new java.awt.BorderLayout());
         scr.setViewportView(menulist);
 
