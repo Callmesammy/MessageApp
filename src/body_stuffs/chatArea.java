@@ -1,38 +1,44 @@
 
 package body_stuffs;
 
+import java.awt.Color;
+import swing.ScrollBar;
+
 /**
  *
  * @author HP
  */
 public class chatArea extends javax.swing.JPanel {
 
-
-    public chatArea(String text) {
+   
+    public chatArea() {
         initComponents();
-        strngText.setEditable(false);
-        strngText.setText(text);
     }
     
- 
+    public void setText(String name){
+        smk.setVerticalScrollBar(new ScrollBar());
+        smk.getVerticalScrollBar().setBackground(Color.white);
+        menulist.setText(name);
+    }
+
    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        strngText = new swing.JIMSendTextPane();
+        smk = new javax.swing.JScrollPane();
+        menulist = new swing.JIMSendTextPane();
 
-        setLayout(new javax.swing.BoxLayout(this, javax.swing.BoxLayout.PAGE_AXIS));
+        setLayout(new javax.swing.BoxLayout(this, javax.swing.BoxLayout.LINE_AXIS));
 
-        jScrollPane1.setViewportView(strngText);
+        smk.setViewportView(menulist);
 
-        add(jScrollPane1);
+        add(smk);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
-    private swing.JIMSendTextPane strngText;
+    private swing.JIMSendTextPane menulist;
+    private javax.swing.JScrollPane smk;
     // End of variables declaration//GEN-END:variables
 }
