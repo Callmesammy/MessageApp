@@ -26,7 +26,7 @@ public class menu_item extends javax.swing.JPanel {
         addMouseListener(new MouseAdapter(){
             @Override
             public void mouseEntered(MouseEvent e) {
-                setBackground(new Color(245,225,220));
+                setBackground(new Color(222, 224, 225));
             }
 
             @Override

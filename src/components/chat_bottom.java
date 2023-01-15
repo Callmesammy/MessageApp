@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package body_stuffs;
+package components;
 
 /**
  *
  * @author HP
  */
-public class bottom extends javax.swing.JPanel {
+public class chat_bottom extends javax.swing.JPanel {
 
     /**
-     * Creates new form bottom
+     * Creates new form chat_bottom
      */
-    public bottom() {
+    public chat_bottom() {
         initComponents();
     }
 
@@ -26,17 +26,17 @@ public class bottom extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(new java.awt.Color(51, 51, 51));
+        setBackground(new java.awt.Color(89, 89, 89));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 548, Short.MAX_VALUE)
+            .addGap(0, 533, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 37, Short.MAX_VALUE)
+            .addGap(0, 70, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

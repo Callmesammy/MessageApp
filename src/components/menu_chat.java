@@ -20,59 +20,57 @@ public class menu_chat extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        heading1 = new body_stuffs.heading();
-        bottom1 = new body_stuffs.bottom();
-        body1 = new body_stuffs.body();
+        chat_title1 = new components.chat_title();
+        chat_bottom1 = new components.chat_bottom();
+        chat_body1 = new components.chat_body();
 
-        javax.swing.GroupLayout heading1Layout = new javax.swing.GroupLayout(heading1);
-        heading1.setLayout(heading1Layout);
-        heading1Layout.setHorizontalGroup(
-            heading1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        setBackground(new java.awt.Color(236, 255, 254));
+
+        javax.swing.GroupLayout chat_title1Layout = new javax.swing.GroupLayout(chat_title1);
+        chat_title1.setLayout(chat_title1Layout);
+        chat_title1Layout.setHorizontalGroup(
+            chat_title1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        heading1Layout.setVerticalGroup(
-            heading1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 38, Short.MAX_VALUE)
+        chat_title1Layout.setVerticalGroup(
+            chat_title1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 42, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout bottom1Layout = new javax.swing.GroupLayout(bottom1);
-        bottom1.setLayout(bottom1Layout);
-        bottom1Layout.setHorizontalGroup(
-            bottom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout chat_bottom1Layout = new javax.swing.GroupLayout(chat_bottom1);
+        chat_bottom1.setLayout(chat_bottom1Layout);
+        chat_bottom1Layout.setHorizontalGroup(
+            chat_bottom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        bottom1Layout.setVerticalGroup(
-            bottom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 60, Short.MAX_VALUE)
+        chat_bottom1Layout.setVerticalGroup(
+            chat_bottom1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 44, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(heading1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(bottom1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, 0)
-                .addComponent(body1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(chat_title1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(chat_bottom1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(chat_body1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(heading1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(body1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(chat_title1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(bottom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addComponent(chat_body1, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
+                .addComponent(chat_bottom1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private body_stuffs.body body1;
-    private body_stuffs.bottom bottom1;
-    private body_stuffs.heading heading1;
+    private components.chat_body chat_body1;
+    private components.chat_bottom chat_bottom1;
+    private components.chat_title chat_title1;
     // End of variables declaration//GEN-END:variables
 }

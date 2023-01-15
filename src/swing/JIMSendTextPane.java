@@ -15,6 +15,7 @@ import javax.swing.text.StyledEditorKit;
 import javax.swing.text.View;
 import javax.swing.text.ViewFactory;
 
+
 public class JIMSendTextPane extends JTextPane {
 
     private class WarpEditorKit extends StyledEditorKit {
