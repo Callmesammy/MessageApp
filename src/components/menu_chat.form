@@ -21,15 +21,15 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="chat_title1" max="32767" attributes="0"/>
           <Component id="chat_bottom1" alignment="0" max="32767" attributes="0"/>
           <Component id="chat_body1" alignment="1" pref="504" max="32767" attributes="0"/>
+          <Component id="chat_title2" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="chat_title1" min="-2" max="-2" attributes="0"/>
+              <Component id="chat_title2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Component id="chat_body1" pref="470" max="32767" attributes="0"/>
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
@@ -39,21 +39,6 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="components.chat_title" name="chat_title1">
-
-      <Layout>
-        <DimensionLayout dim="0">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-        <DimensionLayout dim="1">
-          <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="42" max="32767" attributes="0"/>
-          </Group>
-        </DimensionLayout>
-      </Layout>
-    </Container>
     <Container class="components.chat_bottom" name="chat_bottom1">
 
       <Layout>
@@ -70,6 +55,8 @@
       </Layout>
     </Container>
     <Component class="components.chat_body" name="chat_body1">
+    </Component>
+    <Component class="components.chat_title" name="chat_title2">
     </Component>
   </SubComponents>
 </Form>

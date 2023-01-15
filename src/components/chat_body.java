@@ -11,37 +11,37 @@ public class chat_body extends javax.swing.JPanel {
     public chat_body() {
         initComponents();
         init();
-        left_text("Callmesammy");
+        left_text("Callmesammy", "James");
         left_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "George");
         right_text("Hello");
-        
+        addDate("15/01/2023");
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
          left_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Peace");
+        right_text("Hello");
+          addDate("16/01/2023");
+        right_text("Texts lets you send and receive messages from all major messaging platforms:"
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); left_text("Texts lets you send and receive messages from all major messaging platforms:"
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Sammy");
         right_text("Hello");
         
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); left_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Dayo");
+        right_text("Hello");
+          addDate("18/02/2023");
+        right_text("Texts lets you send and receive messages from all major messaging platforms:"
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); left_text("Texts lets you send and receive messages from all major messaging platforms:"
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "David");
         right_text("Hello");
         
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); left_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Usman");
         right_text("Hello");
-        
-        right_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); left_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
-        right_text("Hello");
-        
-        right_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); left_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
-        right_text("Hello");
-        
+          addDate("20/02/2023");
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
     }
@@ -52,12 +52,22 @@ public class chat_body extends javax.swing.JPanel {
         smk.getVerticalScrollBar().setBackground(Color.WHITE);
         
     }
-    private void left_text(String text){
-        chat_left chat = new chat_left();
+    private void left_text(String text, String txt){
+        chat_left_profile chat = new chat_left_profile();
+        chat.setProfile(txt);
         chat.setText(text);
         panel.add(chat, "wrap, w al ::70%");
         panel.repaint();
         panel.revalidate();
+    }
+    
+    public void addDate(String txt){
+        Date adddate = new Date();
+        adddate.addDate(txt);
+        panel.add(adddate, "wrap, center ");
+        panel.repaint();
+        panel.revalidate();
+        
     }
     
        private void right_text (String text){

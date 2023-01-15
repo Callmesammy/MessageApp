@@ -16,6 +16,8 @@ public class chat_right extends javax.swing.JLayeredPane {
   public void setText(String text){
       chat_item.setText(text);
       chat_item.setTime("1:30 PM");
+      chat_item.seen();
+    
   }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
