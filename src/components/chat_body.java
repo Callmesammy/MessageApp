@@ -2,6 +2,8 @@
 package components;
 
 import java.awt.Color;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import net.miginfocom.swing.MigLayout;
 import swing.ScrollBar;
 
@@ -13,7 +15,7 @@ public class chat_body extends javax.swing.JPanel {
         init();
         left_text("Callmesammy", "James");
         left_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "George");
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "George", new ImageIcon(getClass().getResource("/message/pics/dog.jpg")),new ImageIcon(getClass().getResource("/message/pics/dog.jpg")));
         right_text("Hello");
         addDate("15/01/2023");
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
@@ -52,8 +54,10 @@ public class chat_body extends javax.swing.JPanel {
         smk.getVerticalScrollBar().setBackground(Color.WHITE);
         
     }
-    private void left_text(String text, String txt){
+    private void left_text(String text, String txt, Icon... image){
         chat_left_profile chat = new chat_left_profile();
+        chat.setImage(image);
+        chat.setTime();
         chat.setProfile(txt);
         chat.setText(text);
         panel.add(chat, "wrap, w al ::70%");

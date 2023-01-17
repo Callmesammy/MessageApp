@@ -8,6 +8,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -36,7 +37,7 @@ public class chat_item extends javax.swing.JPanel {
         but.setForeground(new Color(21,152,221));
         but.setFont(new Font("sansserif", 1,12));
         but.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        chat_item.setBorder(new EmptyBorder(0,5,10,5));
+        chat_item.setBorder(new EmptyBorder(0,10,10,5));
         layer.setBorder(new EmptyBorder(0,0,5,10));
         layer.add(but);
         add(layer, 0);
@@ -45,6 +46,17 @@ public class chat_item extends javax.swing.JPanel {
         chat_item.setText(text);
     }
     
+    public void setImage (boolean right, Icon... image){
+        JLayeredPane layer = new JLayeredPane();
+        layer.setLayout(new FlowLayout(right? FlowLayout.RIGHT : FlowLayout.LEFT));
+        layer.setBorder(new EmptyBorder(0,5,10,5));
+        chat_image imagee = new chat_image();
+        imagee.setImage(image);
+        layer.add(imagee);
+        add(layer);
+        
+        
+    }
     public void setTime(String time){
         JLayeredPane layer = new JLayeredPane();
         layer.setLayout(new FlowLayout(FlowLayout.RIGHT,0,0));
@@ -56,6 +68,7 @@ public class chat_item extends javax.swing.JPanel {
         add(layer);
     }
     
+
     public void sent(){
         if (label != null) {
             label.setIcon(new ImageIcon(getClass().getResource("/message/pics/tick1.png")));
