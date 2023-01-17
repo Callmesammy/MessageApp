@@ -13,7 +13,7 @@ public class chat_body extends javax.swing.JPanel {
     public chat_body() {
         initComponents();
         init();
-        left_text("Callmesammy", "James");
+        left_text("Callmesammy", "James", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
         left_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "George", new ImageIcon(getClass().getResource("/message/pics/dog.jpg")),new ImageIcon(getClass().getResource("/message/pics/dog.jpg")));
         right_text("Hello");
@@ -25,13 +25,15 @@ public class chat_body extends javax.swing.JPanel {
         right_text("Hello");
           addDate("16/01/2023");
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); left_text("Texts lets you send and receive messages from all major messaging platforms:"
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); 
+        left_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Sammy");
         right_text("Hello");
         
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); left_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Dayo");
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
+        left_text("Texts lets you send and receive messages from all major messaging platforms:"
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Dayo", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")), new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
         right_text("Hello");
           addDate("18/02/2023");
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
@@ -60,7 +62,7 @@ public class chat_body extends javax.swing.JPanel {
         chat.setTime();
         chat.setProfile(txt);
         chat.setText(text);
-        panel.add(chat, "wrap, w al ::70%");
+        panel.add(chat, "wrap, w al ::65%");
         panel.repaint();
         panel.revalidate();
     }

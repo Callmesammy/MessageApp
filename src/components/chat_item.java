@@ -31,20 +31,22 @@ public class chat_item extends javax.swing.JPanel {
     public void setProfile (String button){
         JLayeredPane layer = new JLayeredPane();
         layer.setLayout(new FlowLayout(FlowLayout.LEFT,0,0));
-        
-        JButton but = new JButton(button);
+         JButton but = new JButton(button);
         but.setContentAreaFilled(false);
-        but.setBorder(new EmptyBorder(10,10,0,10));
+        but.setBorder(new EmptyBorder(10,5,0,5));
         but.setForeground(new Color(21,152,221));
         but.setFont(new Font("sansserif", 1,12));
         but.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        chat_item.setBorder(new EmptyBorder(0,10,5,5));
-        layer.setBorder(new EmptyBorder(0,5,5,10));
+        chat_item.setBorder(new EmptyBorder(0,10,5,10));
+        layer.setBorder(new EmptyBorder(0,5,10,5));
         layer.add(but);
         add(layer, 0);
     }
     public void setText (String text){
         chat_item.setText(text);
+    }
+      public void hideText (String text){
+        chat_item.setVisible(false);
     }
     
     public void setImage (boolean right, Icon... image){
@@ -52,6 +54,7 @@ public class chat_item extends javax.swing.JPanel {
         layer.setLayout(new FlowLayout(right? FlowLayout.RIGHT : FlowLayout.LEFT));
         layer.setBorder(new EmptyBorder(0,5,5,5));
         chat_image imagee = new chat_image();
+        imagee.setBorder(new EmptyBorder(0,0,5,10));
         imagee.setImage(image);
         layer.add(imagee);
         add(layer);
@@ -61,7 +64,7 @@ public class chat_item extends javax.swing.JPanel {
     public void setTime(String time){
         JLayeredPane layer = new JLayeredPane();
         layer.setLayout(new FlowLayout(FlowLayout.RIGHT,0,0));
-        layer.setBorder(new EmptyBorder(0,10,5,10));
+        layer.setBorder(new EmptyBorder(0,5,5,5));
         label = new JLabel(time);
         label.setForeground(new Color(93, 93, 93));
         label.setHorizontalTextPosition(JLabel.LEFT);

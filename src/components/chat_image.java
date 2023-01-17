@@ -16,7 +16,7 @@ public class chat_image extends javax.swing.JLayeredPane {
      */
     public chat_image() {
         initComponents();
-        setLayout(new MigLayout("", "", "0[]0"));
+        setLayout(new MigLayout("", "0[]0", "2[]2"));
     }
 
     public void setImage (Icon... image){
