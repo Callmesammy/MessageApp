@@ -13,9 +13,8 @@ public class chat_body extends javax.swing.JPanel {
     public chat_body() {
         initComponents();
         init();
-        left_text("Callmesammy", "James", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
-        left_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "George", new ImageIcon(getClass().getResource("/message/pics/dog.jpg")),new ImageIcon(getClass().getResource("/message/pics/dog.jpg")));
+        left_text(" ", "James", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
+        left_text("", "George", new ImageIcon(getClass().getResource("/message/pics/dog.jpg")),new ImageIcon(getClass().getResource("/message/pics/dog.jpg")));
         right_text("Hello");
         addDate("15/01/2023");
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
@@ -37,14 +36,14 @@ public class chat_body extends javax.swing.JPanel {
         right_text("Hello");
           addDate("18/02/2023");
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); left_text("Texts lets you send and receive messages from all major messaging platforms:"
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")), new ImageIcon(getClass().getResource("/message/pics/cv.jpg"))); left_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "David");
         right_text("Hello");
         
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); left_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Usman");
-        right_text("Hello");
+        right_text("Hello", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")), new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
           addDate("20/02/2023");
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
@@ -57,7 +56,7 @@ public class chat_body extends javax.swing.JPanel {
         
     }
     private void left_text(String text, String txt, Icon... image){
-        chat_left_profile chat = new chat_left_profile();
+        chat_left chat = new chat_left();
         chat.setImage(image);
         chat.setTime();
         chat.setProfile(txt);
@@ -76,8 +75,10 @@ public class chat_body extends javax.swing.JPanel {
         
     }
     
-       private void right_text (String text){
+       private void right_text (String text, Icon... image){
         chat_right chats = new chat_right();
+        chats.setImage(image);
+        chats.setTime();
         chats.setText(text);
         panel.add(chats, "wrap, right, w al ::70%");
         panel.repaint();

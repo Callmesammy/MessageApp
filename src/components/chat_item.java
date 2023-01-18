@@ -53,7 +53,7 @@ public class chat_item extends javax.swing.JPanel {
         JLayeredPane layer = new JLayeredPane();
         layer.setLayout(new FlowLayout(right? FlowLayout.RIGHT : FlowLayout.LEFT));
         layer.setBorder(new EmptyBorder(0,5,5,5));
-        chat_image imagee = new chat_image();
+        chat_image imagee = new chat_image(right);
         imagee.setBorder(new EmptyBorder(0,0,5,10));
         imagee.setImage(image);
         layer.add(imagee);

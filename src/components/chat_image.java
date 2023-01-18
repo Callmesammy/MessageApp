@@ -14,9 +14,9 @@ public class chat_image extends javax.swing.JLayeredPane {
     /**
      * Creates new form chat_image
      */
-    public chat_image() {
+    public chat_image(boolean tight) {
         initComponents();
-        setLayout(new MigLayout("", "0[]0", "2[]2"));
+        setLayout(new MigLayout("", "0[("+(tight ? "right" : "left")+"]0", "2[]2"));
     }
 
     public void setImage (Icon... image){
