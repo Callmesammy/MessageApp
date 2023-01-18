@@ -52,9 +52,9 @@ public class chat_item extends javax.swing.JPanel {
     public void setImage (boolean right, Icon... image){
         JLayeredPane layer = new JLayeredPane();
         layer.setLayout(new FlowLayout(right? FlowLayout.RIGHT : FlowLayout.LEFT));
-        layer.setBorder(new EmptyBorder(0,5,5,5));
+        layer.setBorder(new EmptyBorder(0,5,0,5));
         chat_image imagee = new chat_image(right);
-        imagee.setBorder(new EmptyBorder(0,0,5,10));
+        imagee.setBorder(new EmptyBorder(0,5,0,10));
         imagee.setImage(image);
         layer.add(imagee);
         add(layer);

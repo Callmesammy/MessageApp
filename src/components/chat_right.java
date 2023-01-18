@@ -18,7 +18,7 @@ public class chat_right extends javax.swing.JLayeredPane {
   public void setText(String text){
       if (chat_item.equals(" ")) {
           chat_item.hideText(text);
-      }else{
+      }else{                                                              
           chat_item.setText(text);
       }
       

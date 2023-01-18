@@ -2,8 +2,6 @@
 package components;
 
 import java.awt.Dimension;
-import java.awt.Point;
-import java.awt.Rectangle;
 import javax.swing.Icon;
 import net.miginfocom.swing.MigLayout;
 import swing.pictureBox;
@@ -11,12 +9,10 @@ import swing.pictureBox;
 
 public class chat_image extends javax.swing.JLayeredPane {
 
-    /**
-     * Creates new form chat_image
-     */
-    public chat_image(boolean tight) {
+  
+    public chat_image(boolean right) {
         initComponents();
-        setLayout(new MigLayout("", "0[("+(tight ? "right" : "left")+"]0", "2[]2"));
+        setLayout(new MigLayout("", "0[" +(right ? "right" : "left")+"]0", "2[]2"));
     }
 
     public void setImage (Icon... image){
