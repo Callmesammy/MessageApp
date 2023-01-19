@@ -1,7 +1,11 @@
 
 package Main;
 
+
+import events.EventHandler;
+import events.EventImage;
 import java.awt.Dimension;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import swing.ComponentResizer;
 
@@ -26,8 +30,18 @@ public class MainPage extends javax.swing.JFrame {
         resize.setMaximumSize(getToolkit().getScreenSize());
         resize.getSnapSize();
         setIconImage(new ImageIcon(getClass().getResource("/message/pics/chat.png")).getImage());
+        ininit();
     }
-
+    
+    private void ininit(){
+        EventHandler.gEventHandler().addEventHandler(new EventImage() {
+            @Override
+            public void viewImage(Icon imag) {
+                System.out.println("Testing");
+            }
+        });
+    }
+   
    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -95,8 +109,8 @@ public class MainPage extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jLayeredPane1.setLayout(new java.awt.BorderLayout());
-        jLayeredPane1.add(home_page1, java.awt.BorderLayout.CENTER);
+        jLayeredPane1.setLayout(new javax.swing.BoxLayout(jLayeredPane1, javax.swing.BoxLayout.LINE_AXIS));
+        jLayeredPane1.add(home_page1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

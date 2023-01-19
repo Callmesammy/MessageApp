@@ -56,7 +56,7 @@ public class chat_body extends javax.swing.JPanel {
         
     }
     private void left_text(String text, String txt, Icon... image){
-        chat_left chat = new chat_left();
+        chat_left_profile chat = new chat_left_profile();
         chat.setImage(image);
         chat.setTime();
         chat.setProfile(txt);

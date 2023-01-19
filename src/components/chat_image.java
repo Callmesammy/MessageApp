@@ -1,8 +1,13 @@
 
 package components;
 
+import events.EventHandler;
+import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.Icon;
+import javax.swing.SwingUtilities;
 import net.miginfocom.swing.MigLayout;
 import swing.pictureBox;
 
@@ -15,15 +20,31 @@ public class chat_image extends javax.swing.JLayeredPane {
         setLayout(new MigLayout("", "0[" +(right ? "right" : "left")+"]0", "2[]2"));
     }
 
-    public void setImage (Icon... image){
-        for(Icon images: image){
+    public void setImage (Icon... images){
+        for(Icon image: images){
             pictureBox pic = new pictureBox();
-            pic.setPreferredSize(getAutoSize(images, 200, 200));
-            pic.setImage(images);
+            pic.setPreferredSize(getAutoSize(image, 200, 200));
+            pic.setImage(image);
+            addImage(pic, image);
             add(pic, "wrap");
+          
         }
     }
     
+    public void addImage(Component com, Icon imag){
+        com.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (SwingUtilities.isLeftMouseButton(e)) {
+                    EventHandler.gEventHandler().getEvent().viewImage(imag);
+                    
+                }
+            }
+        
+        });
+    }
+   
+   
     
        private Dimension getAutoSize(Icon image, int w, int h) {
         int iw = image.getIconWidth();
