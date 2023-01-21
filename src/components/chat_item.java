@@ -33,11 +33,11 @@ public class chat_item extends javax.swing.JPanel {
         layer.setLayout(new FlowLayout(FlowLayout.LEFT,0,0));
          JButton but = new JButton(button);
         but.setContentAreaFilled(false);
-        but.setBorder(new EmptyBorder(10,5,0,5));
+        but.setBorder(new EmptyBorder(15,5,0,5));
         but.setForeground(new Color(21,152,221));
         but.setFont(new Font("sansserif", 1,12));
         but.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        chat_item.setBorder(new EmptyBorder(0,10,5,10));
+        chat_item.setBorder(new EmptyBorder(-20,10,5,10));
         layer.setBorder(new EmptyBorder(0,5,10,5));
         layer.add(but);
         add(layer, 0);
@@ -45,16 +45,13 @@ public class chat_item extends javax.swing.JPanel {
     public void setText (String text){
         chat_item.setText(text);
     }
-      public void hideText (String text){
-        chat_item.setVisible(false);
-    }
-    
+       
     public void setImage (boolean right, Icon... image){
         JLayeredPane layer = new JLayeredPane();
-        layer.setLayout(new FlowLayout(right? FlowLayout.RIGHT : FlowLayout.LEFT));
+        layer.setLayout(new FlowLayout(right ? FlowLayout.RIGHT : FlowLayout.CENTER));
         layer.setBorder(new EmptyBorder(0,5,0,5));
-        chat_image imagee = new chat_image(right);
-        imagee.setBorder(new EmptyBorder(0,5,0,10));
+        chat_image imagee = new chat_image();
+        imagee.setBorder(new EmptyBorder(0,5,0,0));
         imagee.setImage(image);
         layer.add(imagee);
         add(layer);
@@ -72,8 +69,7 @@ public class chat_item extends javax.swing.JPanel {
         add(layer);
     }
     
-
-    public void sent(){
+      public void sent(){
         if (label != null) {
             label.setIcon(new ImageIcon(getClass().getResource("/message/pics/tick1.png")));
         }

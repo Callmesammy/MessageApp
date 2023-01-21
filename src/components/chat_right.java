@@ -16,18 +16,13 @@ public class chat_right extends javax.swing.JLayeredPane {
 
 
   public void setText(String text){
-      if (chat_item.equals(" ")) {
-          chat_item.hideText(text);
-      }else{                                                              
-          chat_item.setText(text);
-      }
+     
+           chat_item.setText(text);
       
       chat_item.seen();
      
   }
-  public void setImage (Icon... image){
-      chat_item.setImage(true, image);
-  }
+  
   public void setTime(){
       chat_item.setTime("10:15 AM");
   }

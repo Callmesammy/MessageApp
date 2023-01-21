@@ -2,10 +2,7 @@
 package Main;
 
 
-import events.EventHandler;
-import events.EventImage;
 import java.awt.Dimension;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import swing.ComponentResizer;
 
@@ -30,17 +27,9 @@ public class MainPage extends javax.swing.JFrame {
         resize.setMaximumSize(getToolkit().getScreenSize());
         resize.getSnapSize();
         setIconImage(new ImageIcon(getClass().getResource("/message/pics/chat.png")).getImage());
-        ininit();
     }
     
-    private void ininit(){
-        EventHandler.gEventHandler().addEventHandler(new EventImage() {
-            @Override
-            public void viewImage(Icon imag) {
-                System.out.println("Testing");
-            }
-        });
-    }
+   
    
    
     @SuppressWarnings("unchecked")

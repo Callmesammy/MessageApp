@@ -18,12 +18,7 @@ public class chat_left_profile extends javax.swing.JLayeredPane {
         chat_item1.setProfile(text);
     }
   public void setText(String text){
-      if (chat_item1.equals(" ")) {
-          chat_item1.hideText(text);
-      }else{
-          chat_item1.setText(text);
-      }
-      
+      chat_item1.setText(text);
       chat_item1.sent();
      
   }
