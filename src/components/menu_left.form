@@ -52,6 +52,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/message/pics/call.png"/>
             </Property>
+            <Property name="actionCommand" type="java.lang.String" value=""/>
             <Property name="icon1" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/message/pics/call.png"/>
             </Property>
@@ -59,6 +60,9 @@
               <Image iconType="3" name="/message/pics/call2.png"/>
             </Property>
           </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="callActionPerformed"/>
           </Events>
@@ -82,7 +86,7 @@
         <Component class="swing.button" name="user">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/message/pics/user2.png"/>
+              <Image iconType="3" name="/message/pics/user.png"/>
             </Property>
             <Property name="icon1" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/message/pics/user.png"/>

@@ -76,6 +76,7 @@ public class menu_left extends javax.swing.JPanel {
         heading.setLayout(new javax.swing.BoxLayout(heading, javax.swing.BoxLayout.LINE_AXIS));
 
         call.setIcon(new javax.swing.ImageIcon(getClass().getResource("/message/pics/call.png"))); // NOI18N
+        call.setActionCommand("");
         call.setIcon1(new javax.swing.ImageIcon(getClass().getResource("/message/pics/call.png"))); // NOI18N
         call.setIcon2(new javax.swing.ImageIcon(getClass().getResource("/message/pics/call2.png"))); // NOI18N
         call.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +85,7 @@ public class menu_left extends javax.swing.JPanel {
             }
         });
         heading.add(call);
+        call.getAccessibleContext().setAccessibleName("");
 
         message.setIcon(new javax.swing.ImageIcon(getClass().getResource("/message/pics/message2.png"))); // NOI18N
         message.setIcon1(new javax.swing.ImageIcon(getClass().getResource("/message/pics/message.png"))); // NOI18N
@@ -95,7 +97,7 @@ public class menu_left extends javax.swing.JPanel {
         });
         heading.add(message);
 
-        user.setIcon(new javax.swing.ImageIcon(getClass().getResource("/message/pics/user2.png"))); // NOI18N
+        user.setIcon(new javax.swing.ImageIcon(getClass().getResource("/message/pics/user.png"))); // NOI18N
         user.setIcon1(new javax.swing.ImageIcon(getClass().getResource("/message/pics/user.png"))); // NOI18N
         user.setIcon2(new javax.swing.ImageIcon(getClass().getResource("/message/pics/user2.png"))); // NOI18N
         user.addActionListener(new java.awt.event.ActionListener() {
@@ -131,30 +133,32 @@ public class menu_left extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void callActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_callActionPerformed
-        if (!call.isSelected()) {
-            call.setSelected(true);
-            message.setSelected(false);
-            user.setSelected(false);
-              call();
-        }
+     if(!call.isSelected()){
+         call.setSelected(true);
+         message.setSelected(false);
+         user.setSelected(false);
+     }
+     call();
     }//GEN-LAST:event_callActionPerformed
 
     private void messageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_messageActionPerformed
-           if (!message.isSelected()) {
-            call.setSelected(false);
-            message.setSelected(true);
-            user.setSelected(false);
-            message();
-           }
+      if(!message.isSelected()){
+         call.setSelected(false);
+         message.setSelected(true);
+         user.setSelected(false);
+     }
+      message();
     }//GEN-LAST:event_messageActionPerformed
 
     private void userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userActionPerformed
-           if (!user.isSelected()) {
-            call.setSelected(false);
-            message.setSelected(false);
-            user.setSelected(true);
-            user();
-           }
+      if(!user.isSelected()){
+         call.setSelected(false);
+         message.setSelected(false);
+         user.setSelected(true);
+     
+      }
+      user();
+      
     }//GEN-LAST:event_userActionPerformed
 
 
