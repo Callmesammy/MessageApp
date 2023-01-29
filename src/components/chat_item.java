@@ -48,7 +48,7 @@ public class chat_item extends javax.swing.JPanel {
        
     public void setImage (boolean right, Icon... image){
         JLayeredPane layer = new JLayeredPane();
-        layer.setLayout(new FlowLayout(right ? FlowLayout.RIGHT : FlowLayout.CENTER));
+        layer.setLayout(new FlowLayout(right ? FlowLayout.RIGHT : FlowLayout.LEFT));
         layer.setBorder(new EmptyBorder(0,5,0,5));
         chat_image imagee = new chat_image();
         imagee.setBorder(new EmptyBorder(0,5,0,0));

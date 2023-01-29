@@ -27,7 +27,11 @@ public class MainPage extends javax.swing.JFrame {
         resize.setMaximumSize(getToolkit().getScreenSize());
         resize.getSnapSize();
         setIconImage(new ImageIcon(getClass().getResource("/message/pics/chat.png")).getImage());
+        
     }
+    
+    
+    
     
    
    
@@ -98,8 +102,8 @@ public class MainPage extends javax.swing.JFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jLayeredPane1.setLayout(new javax.swing.BoxLayout(jLayeredPane1, javax.swing.BoxLayout.LINE_AXIS));
-        jLayeredPane1.add(home_page1);
+        jLayeredPane1.setLayout(new java.awt.CardLayout());
+        jLayeredPane1.add(home_page1, "card2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

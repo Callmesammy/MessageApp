@@ -19,8 +19,8 @@ public class Date extends javax.swing.JPanel {
     private void initComponents() {
 
         date = new javax.swing.JLabel();
-        line1 = new components.line();
-        line2 = new components.line();
+        line1 = new swing.line();
+        line2 = new swing.line();
 
         date.setBackground(new java.awt.Color(200, 200, 200));
         date.setForeground(new java.awt.Color(211, 211, 211));
@@ -60,7 +60,7 @@ public class Date extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel date;
-    private components.line line1;
-    private components.line line2;
+    private swing.line line1;
+    private swing.line line2;
     // End of variables declaration//GEN-END:variables
 }

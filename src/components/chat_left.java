@@ -2,6 +2,7 @@
 package components;
 
 import java.awt.Color;
+import javax.swing.Icon;
 
 
 public class chat_left extends javax.swing.JLayeredPane {
@@ -12,7 +13,7 @@ public class chat_left extends javax.swing.JLayeredPane {
         chat_item1.setOpaque(false);
         chat_item1.setBackground(new Color(225, 225, 225 ));
     }
- public void setProfile (String text){
+  public void setProfile (String text){
         chat_item1.setProfile(text);
     }
   public void setText(String text){
@@ -20,7 +21,9 @@ public class chat_left extends javax.swing.JLayeredPane {
       chat_item1.sent();
      
   }
- 
+  public void setImage (Icon... image){
+      chat_item1.setImage(false, image);
+  }
   public void setTime(){
       chat_item1.setTime("10:15 AM");
   }
