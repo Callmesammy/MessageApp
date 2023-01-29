@@ -25,12 +25,11 @@ public class chat_body extends javax.swing.JPanel {
           addDate("16/01/2023");
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); 
-        left_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Sammy");
-        right_text("Hello");
+        left_text("", "Sammy", new ImageIcon(getClass().getResource("/message/pics/dog.jpg")));
+        right_text("Hello", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
         
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")),new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
         left_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Dayo");
         right_text("Hello");
@@ -65,9 +64,10 @@ public class chat_body extends javax.swing.JPanel {
         
     }
     
-       private void right_text (String text){
+       private void right_text (String text, Icon ...image){
         chat_right chats = new chat_right();
-               chats.setTime();
+        chats.setImage(image);
+         chats.setTime();
         chats.setText(text);
         panel.add(chats, "wrap, right, w al ::70%");
         panel.repaint();

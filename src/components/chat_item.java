@@ -50,7 +50,7 @@ public class chat_item extends javax.swing.JPanel {
         JLayeredPane layer = new JLayeredPane();
         layer.setLayout(new FlowLayout(right ? FlowLayout.RIGHT : FlowLayout.LEFT));
         layer.setBorder(new EmptyBorder(0,5,0,5));
-        chat_image imagee = new chat_image();
+        chat_image imagee = new chat_image(right);
         imagee.setBorder(new EmptyBorder(0,5,0,0));
         imagee.setImage(image);
         layer.add(imagee);
@@ -69,6 +69,9 @@ public class chat_item extends javax.swing.JPanel {
         add(layer);
     }
     
+    public void hideText(){
+        chat_item.setVisible(false);
+    }
       public void sent(){
         if (label != null) {
             label.setIcon(new ImageIcon(getClass().getResource("/message/pics/tick1.png")));

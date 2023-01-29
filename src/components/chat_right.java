@@ -23,9 +23,14 @@ public class chat_right extends javax.swing.JLayeredPane {
      
   }
   
+ 
+  public void setImage (Icon... image){
+      chat_item.setImage(true, image);
+  }
   public void setTime(){
       chat_item.setTime("10:15 AM");
   }
+  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

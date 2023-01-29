@@ -1,8 +1,14 @@
 
 package components;
 
+import Handdlers.eventHanderl;
+import java.awt.Component;
+import java.awt.Cursor;
 import java.awt.Dimension;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import javax.swing.Icon;
+import javax.swing.SwingUtilities;
 import net.miginfocom.swing.MigLayout;
 import swing.pictureBox;
 
@@ -10,9 +16,9 @@ import swing.pictureBox;
 public class chat_image extends javax.swing.JLayeredPane {
 
   
-    public chat_image() {
+    public chat_image(boolean right) {
         initComponents();
-        setLayout(new MigLayout("", "0[]0", "2[]2"));
+        setLayout(new MigLayout("", "0["+(right ? "right" : "left" )+"]0", "2[]2"));
     }
 
     public void setImage (Icon... images){
@@ -20,6 +26,7 @@ public class chat_image extends javax.swing.JLayeredPane {
             pictureBox pic = new pictureBox();
             pic.setPreferredSize(getAutoSize(image, 200, 200));
             pic.setImage(image);
+            aaddImage(pic, image);
                  add(pic, "wrap");
           
         }
@@ -28,8 +35,28 @@ public class chat_image extends javax.swing.JLayeredPane {
     
    
    
-    
+    public void aaddImage(Component com, Icon image){
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+        com.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (SwingUtilities.isLeftMouseButton(e)) {
+                    eventHanderl.getInstance().getEventImage().ViewImage(image);
+                    
+                }
+            }
+            
+        
+        });
+        
+    }
        private Dimension getAutoSize(Icon image, int w, int h) {
+             if (w>image.getIconWidth()) {
+              w = image.getIconWidth();
+          }
+          if (h>image.getIconHeight()) {
+              h = image.getIconHeight();
+          }
         int iw = image.getIconWidth();
         int ih = image.getIconHeight();
         double xScale = (double) w / iw;

@@ -2,7 +2,10 @@
 package Main;
 
 
+import Handdlers.eventHanderl;
+import Handdlers.eventImage;
 import java.awt.Dimension;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import swing.ComponentResizer;
 
@@ -27,9 +30,25 @@ public class MainPage extends javax.swing.JFrame {
         resize.setMaximumSize(getToolkit().getScreenSize());
         resize.getSnapSize();
         setIconImage(new ImageIcon(getClass().getResource("/message/pics/chat.png")).getImage());
-        
+        view_Image1.setVisible(false);
+        home_page1.setVisible(true);
+        initEvent();
     }
     
+    private void initEvent(){
+        eventHanderl.getInstance().addEventImage(new eventImage() {
+            @Override
+            public void ViewImage(Icon image) {
+                view_Image1.ViewImg(image);
+            }
+
+            @Override
+            public void download(Icon image) {
+                System.out.println("Testing");
+            }
+            
+        });
+    }
     
     
     
@@ -45,6 +64,7 @@ public class MainPage extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
+        view_Image1 = new components.view_Image();
         home_page1 = new components.Home_page();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -103,6 +123,7 @@ public class MainPage extends javax.swing.JFrame {
         );
 
         jLayeredPane1.setLayout(new java.awt.CardLayout());
+        jLayeredPane1.add(view_Image1, "card3");
         jLayeredPane1.add(home_page1, "card2");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -110,7 +131,7 @@ public class MainPage extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 805, Short.MAX_VALUE)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 869, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -198,5 +219,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private components.view_Image view_Image1;
     // End of variables declaration//GEN-END:variables
 }

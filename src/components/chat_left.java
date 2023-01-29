@@ -13,7 +13,8 @@ public class chat_left extends javax.swing.JLayeredPane {
         chat_item1.setOpaque(false);
         chat_item1.setBackground(new Color(225, 225, 225 ));
     }
-  public void setProfile (String text){
+
+ public void setProfile (String text){
         chat_item1.setProfile(text);
     }
   public void setText(String text){
