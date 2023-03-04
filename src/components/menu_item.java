@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import net.miginfocom.swing.MigLayout;
 
 /**
  *
@@ -16,7 +17,9 @@ public class menu_item extends javax.swing.JPanel {
      */
     public menu_item(String text) {
         initComponents();
+//        setLayout(new MigLayout("", "0[center]0","[center]"));
         enterText.setText(text);
+//        setOpaque(false);
         setCursor(new Cursor(Cursor.HAND_CURSOR) {
         });
         init();
@@ -61,7 +64,7 @@ public class menu_item extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(imageAvatar1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(3, 3, 3)
-                .addComponent(enterText, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(enterText, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -69,8 +72,8 @@ public class menu_item extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(enterText, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
+                        .addGap(0, 0, 0)
+                        .addComponent(enterText, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE))
                     .addComponent(imageAvatar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
         );
