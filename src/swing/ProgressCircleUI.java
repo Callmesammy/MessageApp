@@ -72,4 +72,5 @@ public class ProgressCircleUI extends BasicProgressBarUI {
         if (progressBar.isStringPainted()) {
             paintString(g, b.left, b.top, barRectWidth, barRectHeight, 0, b);
         }
-    }}
+    }
+}
