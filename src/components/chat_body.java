@@ -13,23 +13,23 @@ public class chat_body extends javax.swing.JPanel {
     public chat_body() {
         initComponents();
         init();
-        left_text("Texts lets you send and receive messages from all major messaging platforms ", "James", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
-        left_text("Texts lets you send and receive messages from all major messaging platformsTexts lets you send and receive messages from all major messaging platforms", "George", new ImageIcon(getClass().getResource("/message/pics/dog.jpg")),new ImageIcon(getClass().getResource("/message/pics/dog.jpg")));
-        right_text("Hello");
-        addDate("15/01/2023");
-        right_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
-         left_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Peace");
-        right_text("Hello");
-          addDate("16/01/2023");
-        right_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); 
-        left_text("", "Sammy", new ImageIcon(getClass().getResource("/message/pics/dog.jpg")));
-        right_text("Hello", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
-        
-        right_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")),new ImageIcon(getClass().getResource("/message/pics/chat.png")));
+//        left_text("Texts lets you send and receive messages from all major messaging platforms ", "James", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
+//        left_text("Texts lets you send and receive messages from all major messaging platformsTexts lets you send and receive messages from all major messaging platforms", "George", new ImageIcon(getClass().getResource("/message/pics/dog.jpg")),new ImageIcon(getClass().getResource("/message/pics/dog.jpg")));
+//        right_text("Hello");
+//        addDate("15/01/2023");
+//        right_text("Texts lets you send and receive messages from all major messaging platforms:"
+//                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.");
+//         left_text("Texts lets you send and receive messages from all major messaging platforms:"
+//                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Peace");
+//        right_text("Hello");
+//          addDate("16/01/2023");
+//        right_text("Texts lets you send and receive messages from all major messaging platforms:"
+//                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn."); 
+//        left_text("", "Sammy", new ImageIcon(getClass().getResource("/message/pics/dog.jpg")));
+//        right_text("Hello", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
+//        
+//        right_text("Texts lets you send and receive messages from all major messaging platforms:"
+//                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")),new ImageIcon(getClass().getResource("/message/pics/chat.png")));
         left_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Dayo");
         right_text("Hello");

@@ -23,7 +23,7 @@ public class menu_left extends javax.swing.JPanel {
     }
     
     private void init(){
-        menulist.setLayout(new MigLayout("fillx", "0[]0", "1[]1"));
+        menulist.setLayout(new MigLayout("fillx", "2[center]4", "1[]1"));
                   call();
         }
         private void call(){
@@ -76,7 +76,6 @@ public class menu_left extends javax.swing.JPanel {
         heading.setLayout(new javax.swing.BoxLayout(heading, javax.swing.BoxLayout.LINE_AXIS));
 
         call.setIcon(new javax.swing.ImageIcon(getClass().getResource("/message/pics/call.png"))); // NOI18N
-        call.setActionCommand("");
         call.setIcon1(new javax.swing.ImageIcon(getClass().getResource("/message/pics/call.png"))); // NOI18N
         call.setIcon2(new javax.swing.ImageIcon(getClass().getResource("/message/pics/call2.png"))); // NOI18N
         call.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +84,6 @@ public class menu_left extends javax.swing.JPanel {
             }
         });
         heading.add(call);
-        call.getAccessibleContext().setAccessibleName("");
 
         message.setIcon(new javax.swing.ImageIcon(getClass().getResource("/message/pics/message2.png"))); // NOI18N
         message.setIcon1(new javax.swing.ImageIcon(getClass().getResource("/message/pics/message.png"))); // NOI18N
@@ -111,7 +109,7 @@ public class menu_left extends javax.swing.JPanel {
         scr.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         scr.setOpaque(false);
 
-        menulist.setBackground(new java.awt.Color(236, 255, 254));
+        menulist.setBackground(new java.awt.Color(204, 204, 204));
         menulist.setOpaque(true);
         menulist.setLayout(new java.awt.BorderLayout());
         scr.setViewportView(menulist);
