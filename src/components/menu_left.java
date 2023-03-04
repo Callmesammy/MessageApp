@@ -22,7 +22,7 @@ public class menu_left extends javax.swing.JPanel {
     }
     
     private void init(){
-        menulist.setLayout(new MigLayout("fillx, filly, wrap", "2[center]2", "1[]1"));
+        menulist.setLayout(new MigLayout("fillx", "4[center]2", "1[]1"));
                   call();
         }
         private void call(){
