@@ -29,7 +29,7 @@ public class chat_body extends javax.swing.JPanel {
         right_text("Hello", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
         
         right_text("Texts lets you send and receive messages from all major messaging platforms:"
-                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")),new ImageIcon(getClass().getResource("/message/pics/cv.jpg")));
+                + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", new ImageIcon(getClass().getResource("/message/pics/cv.jpg")),new ImageIcon(getClass().getResource("/message/pics/chat.png")));
         left_text("Texts lets you send and receive messages from all major messaging platforms:"
                 + " iMessage. WhatsApp. Telegram. Signal. Messenger. Twitter. Instagram. LinkedIn.", "Dayo");
         right_text("Hello");
