@@ -1,9 +1,12 @@
 
 package components;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import javax.swing.JScrollPane;
 import net.miginfocom.swing.MigLayout;
 import swing.JIMSendTextPane;
+import swing.ScrollBar;
 
 /**
  *
@@ -20,13 +23,27 @@ public class chat_bottom extends javax.swing.JPanel {
     }
 
     private void init(){
-        setLayout(new MigLayout("fillx, filly", "", "[fill]"));
+        setLayout(new MigLayout("fillx, filly", "0[]0", "[]"));
         JScrollPane scroll = new JScrollPane();
+        scroll.setBorder(null);
         JIMSendTextPane txt = new JIMSendTextPane();
+        txt.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                refreash();
+            }
+            
+        });
         scroll.setViewportView(txt);
+        ScrollBar sb = new ScrollBar();
+        scroll.setVerticalScrollBar(sb);
         add(scroll, "w 100%");
+
     }
   
+    private void refreash(){
+        revalidate();
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

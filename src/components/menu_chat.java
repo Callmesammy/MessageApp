@@ -12,13 +12,13 @@ public class menu_chat extends javax.swing.JPanel {
     }
 
     private void init (){
-        setLayout(new MigLayout("fillx","0[fill]0","0[]1[100%,bottom]0[shrink]"));
+        setLayout(new MigLayout("fillx","0[fill]0","0[]0[100%,bottom]0[shrink 0]0"));
         chat_title title = new chat_title();
         chat_body body = new chat_body();
         chat_bottom bottom = new chat_bottom();
         add(title, "wrap");
         add(body, "wrap");
-        add(bottom, "h 50");
+        add(bottom, "h ::50%");
         
     }
    
